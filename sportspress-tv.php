@@ -399,17 +399,17 @@ class SportsPress_TV {
 						<tr>
 							<th scope="row"><?php _e( 'Default Channel:', 'sportspress-tv' ); ?></th>
 							<td>
-								<select name="uuid" class="sportspress-tv-uuid">
-									<?php foreach ( $this->channels as $channel_region => $categories ) { ?>
+								<?php foreach ( $this->channels as $channel_region => $categories ) { ?>
+									<select name="uuid" class="sportspress-tv-uuid" data-region="<?php echo $channel_region; ?>"<?php if ( $this->defaults['region'] !== $channel_region ) { ?> style="display: none;" disabled="disabled"<?php } ?>>
 									 	<?php foreach ( $categories as $category => $channels ) { ?>
-											<optgroup label="<?php echo $category; ?>" data-region="<?php echo $channel_region; ?>"<?php if ( $this->defaults['region'] !== $channel_region ) { ?> class="hidden"<?php } ?>>
+											<optgroup label="<?php echo $category; ?>">
 												<?php foreach ( $channels as $name => $value ) { ?>
 													<option value="<?php echo $value; ?>" <?php selected( $value == $this->defaults['uuid'] ); ?>><?php echo $name; ?></option>
 												<?php } ?>
 											</optgroup>
 										<?php } ?>
-									<?php } ?>
-								</select>
+									</select>
+								<?php } ?>
 								<p class="description"><?php _e( 'Territory restrictions apply: some channels may not be available for streaming in your area.', 'sportspress-tv' ); ?></p>
 							</td>
 						</tr>
@@ -454,7 +454,7 @@ class SportsPress_TV {
 				$size = $('.sportspress-tv-thickbox-content [name=size]').find('option:selected');
 				width = $size.data('width');
 				height = $size.data('height');
-				uuid = $('.sportspress-tv-thickbox-content [name=uuid]').val();
+				uuid = $('.sportspress-tv-thickbox-content [name=uuid]:enabled').val();
 				$('.sportspress-tv-thickbox-content iframe').width(width).height(height).attr('src', 'http://sportspress.tv/embed/'+uuid );
 				$.post( ajaxurl, {
 					action:         "sportspress_tv_save_default_settings",
@@ -473,7 +473,7 @@ class SportsPress_TV {
 			var args = {};
 
 			// Add UUID if available and not 0
-			uuid = $div.find('[name=uuid]').val();
+			uuid = $div.find('[name=uuid]:enabled').val();
 			if ( uuid != 0 ) args.uuid = uuid;
 
 			// Add size
@@ -541,17 +541,17 @@ class SportsPress_TV {
 								<label for="uuid"><?php _e( 'Default Channel', 'sportspress-tv' ); ?></label>
 							</th>
 							<td>
-								<select name="uuid" class="sportspress-tv-uuid">
-									<?php foreach ( $this->channels as $channel_region => $categories ) { ?>
+								<?php foreach ( $this->channels as $channel_region => $categories ) { ?>
+									<select name="uuid" class="sportspress-tv-uuid" data-region="<?php echo $channel_region; ?>"<?php if ( $this->defaults['region'] !== $channel_region ) { ?> style="display: none;" disabled="disabled"<?php } ?>>
 									 	<?php foreach ( $categories as $category => $channels ) { ?>
-											<optgroup label="<?php echo $category; ?>" data-region="<?php echo $channel_region; ?>"<?php if ( $this->defaults['region'] !== $channel_region ) { ?> class="hidden"<?php } ?>>
+											<optgroup label="<?php echo $category; ?>">
 												<?php foreach ( $channels as $name => $value ) { ?>
 													<option value="<?php echo $value; ?>" <?php selected( $value == $this->defaults['uuid'] ); ?>><?php echo $name; ?></option>
 												<?php } ?>
 											</optgroup>
 										<?php } ?>
-									<?php } ?>
-								</select>
+									</select>
+								<?php } ?>
 								<p class="description"><?php _e( 'Territory restrictions apply: some channels may not be available for streaming in your area.', 'sportspress-tv' ); ?></p>
 							</td>
 						</tr>

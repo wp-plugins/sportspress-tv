@@ -66,17 +66,17 @@ class SportsPress_TV_Widget extends WP_Widget {
 			</p>
 
 			<p><label for="<?php echo $this->get_field_id('uuid'); ?>"><?php _e( 'Default Channel:', 'sportspress-tv' ); ?></label>
-			<select class="sportspress-tv-uuid widefat" id="<?php echo $this->get_field_id('uuid'); ?>" name="<?php echo $this->get_field_name('uuid'); ?>">
-				<?php foreach ( $sportspress_tv->channels as $channel_region => $categories ) { ?>
+			<?php foreach ( $sportspress_tv->channels as $channel_region => $categories ) { ?>
+				<select class="sportspress-tv-uuid widefat" id="<?php echo $this->get_field_id('uuid'); ?>" name="<?php echo $this->get_field_name('uuid'); ?>" data-region="<?php echo $channel_region; ?>"<?php if ( $region !== $channel_region ) { ?> style="display: none;" disabled="disabled"<?php } ?>>
 				 	<?php foreach ( $categories as $category => $channels ) { ?>
-						<optgroup label="<?php echo $category; ?>" data-region="<?php echo $channel_region; ?>"<?php if ( $region !== $channel_region ) { ?> class="hidden"<?php } ?>>
+						<optgroup label="<?php echo $category; ?>">
 							<?php foreach ( $channels as $name => $value ) { ?>
 								<option value="<?php echo $value; ?>" <?php selected( $value == $uuid ); ?>><?php echo $name; ?></option>
 							<?php } ?>
 						</optgroup>
 					<?php } ?>
-				<?php } ?>
-			</select>
+				</select>
+			<?php } ?>
 			<p class="description"><?php _e( 'Territory restrictions apply: some channels may not be available for streaming in your area.', 'sportspress-tv' ); ?></p>
 			</p>
 

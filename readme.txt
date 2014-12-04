@@ -1,9 +1,9 @@
-=== SportsPress TV - On Demand Sports Videos ===
+=== SportsPress TV - On Demand Sports Videos===
 Contributors: ThemeBoy, brianmiyaji, aylaview
 Tags: eplayer, sports, sport, sportspress, tv, pro, video, on demand, vod, stream, streaming, A-League, AFC Champions League, AFL, ATP World Tour, Autosport, Big Ten, Bundesliga, ECB, Engage Super Rugby League, England Rugby, Eredivisie, European Tour, FIBA, Football League, Lega Calcio, Liga Sagres, Ligue 1, MLB, MLS, Moto GP, NBA, NHL, NRL, One Asia, PDC, PGA Tour, SBK, The FA, Top 14, UFC, Volvo Ocean Race, WTA Tour
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 0.9
+Stable tag: 0.9.1
 License: GPLv2 or later
 
 Embed premium news and match highlights using ePlayer, the leading video on demand service for professional sports content.
@@ -167,6 +167,9 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 4. SportsPress TV setting page.
 
 == Changelog ==
+
+= 0.9.1 =
+* Fix - Switching regions causing channel dropdown to become inactive in some cases.
 
 = 0.9 =
 * Beta release.
