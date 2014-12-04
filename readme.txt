@@ -1,4 +1,4 @@
-=== SportsPress TV ===
+=== SportsPress TV - On Demand Sports Videos ===
 Contributors: ThemeBoy, brianmiyaji, aylaview
 Tags: eplayer, sports, sport, sportspress, tv, pro, video, on demand, vod, stream, streaming, A-League, AFC Champions League, AFL, ATP World Tour, Autosport, Big Ten, Bundesliga, ECB, Engage Super Rugby League, England Rugby, Eredivisie, European Tour, FIBA, Football League, Lega Calcio, Liga Sagres, Ligue 1, MLB, MLS, Moto GP, NBA, NHL, NRL, One Asia, PDC, PGA Tour, SBK, The FA, Top 14, UFC, Volvo Ocean Race, WTA Tour
 Requires at least: 3.0
