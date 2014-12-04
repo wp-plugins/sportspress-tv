@@ -1,14 +1,14 @@
 <?php
 /**
  * @package SportsPress_TV
- * @version 0.9
+ * @version 0.9.1
  */
 /*
 Plugin Name: SportsPress TV
 Plugin URI: http://wordpress.org/plugins/sportspress-tv/
 Description: Embed premium news and match highlights using ePlayer, the leading video on demand service for professional sports content.
 Author: ThemeBoy
-Version: 0.9
+Version: 0.9.1
 Author URI: http://themeboy.com/
 */
 if ( ! defined( 'ABSPATH' ) ) {
