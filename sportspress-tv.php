@@ -1,14 +1,14 @@
 <?php
 /**
  * @package SportsPress_TV
- * @version 0.9.1
+ * @version 0.9.2
  */
 /*
 Plugin Name: SportsPress TV
 Plugin URI: http://wordpress.org/plugins/sportspress-tv/
 Description: Embed premium news and match highlights using ePlayer, the leading video on demand service for professional sports content.
 Author: ThemeBoy
-Version: 0.9.1
+Version: 0.9.2
 Author URI: http://themeboy.com/
 */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,14 +21,14 @@ if ( ! class_exists( 'SportsPress_TV' ) ) :
  * Main SportsPress_TV Class
  *
  * @class SportsPress_TV
- * @version	0.9
+ * @version	0.9.2
  */
 class SportsPress_TV {
 
 	/**
 	 * @var string
 	 */
-	public $version = '0.9';
+	public $version = '0.9.2';
 
 	/**
 	 * @var SportsPress_TV The single instance of the class
@@ -139,7 +139,7 @@ class SportsPress_TV {
 	*/
 	private function define_constants() {
 		if ( !defined( 'SPORTSPRESS_TV_VERSION' ) )
-			define( 'SPORTSPRESS_TV_VERSION', '0.9' );
+			define( 'SPORTSPRESS_TV_VERSION', '0.9.2' );
 
 		if ( !defined( 'SPORTSPRESS_TV_URL' ) )
 			define( 'SPORTSPRESS_TV_URL', plugin_dir_url( __FILE__ ) );
@@ -164,6 +164,10 @@ class SportsPress_TV {
 					break;
 				case 'de':
 				case 'de_DE':
+					$region = 'de';
+					break;
+				case 'es':
+				case 'es_ES':
 					$region = 'de';
 					break;
 				case 'en_GB':
@@ -212,6 +216,7 @@ class SportsPress_TV {
 	private function get_regions() {
 		$this->regions = array(
 			'de' => __( 'Germany', 'sportspress-tv' ),
+			'es' => __( 'Spain', 'sportspress-tv' ),
 			'fr' => __( 'France', 'sportspress-tv' ),
 			'gb' => __( 'UK', 'sportspress-tv' ),
 			'it' => __( 'Italy', 'sportspress-tv' ),

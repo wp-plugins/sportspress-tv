@@ -33,6 +33,28 @@
 	text-align: center;
 }
 
+/* Widgets */
+[id*="sportspress_tv-"] .widget-title h4:before {
+	font-family: 'sportspresstv';
+	color: #aaa;
+	font-size: 20px;
+	content: '\f236';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 0;
+	position: relative;
+	top: 4px;
+	margin-right: 4px;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* TinyMCE */
 .mce-i-sportspress-tv:before {
 	font-family: 'sportspresstv';
 	speak: none;

@@ -2,8 +2,8 @@
 Contributors: ThemeBoy, brianmiyaji, aylaview
 Tags: eplayer, sports, sport, sportspress, tv, pro, video, on demand, vod, stream, streaming, A-League, AFC Champions League, AFL, ATP World Tour, Autosport, Big Ten, Bundesliga, ECB, Engage Super Rugby League, England Rugby, Eredivisie, European Tour, FIBA, Football League, Lega Calcio, Liga Sagres, Ligue 1, MLB, MLS, Moto GP, NBA, NHL, NRL, One Asia, PDC, PGA Tour, SBK, The FA, Top 14, UFC, Volvo Ocean Race, WTA Tour
 Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: 0.9.1
+Tested up to: 4.1
+Stable tag: 0.9.2
 License: GPLv2 or later
 
 Embed premium news and match highlights using ePlayer, the leading video on demand service for professional sports content.
@@ -15,7 +15,7 @@ ThemeBoy is a proud distribution partner for PERFORM’s ePlayer, the leading vi
 
 As the only ePlayer provider to WordPress users, you can now embed professional sports videos on your WordPress website using our new plugin, SportsPress TV.
 
-Offering premium news & highlights from leading globals sports; over 350 dedicated channels. SportsPress TV will offer your keep your users entertained for hours!
+Offering premium news & highlights from leading globals sports; over 350 dedicated channels. SportsPress TV will keep your visitors entertained for hours!
 
 = How does it work? =
 SportsPress TV is a free WordPress plugin that allows you to embed professional sports content on your website. We currently offer several different channels for different sports in different languages and regions, including the Premier League, NBA, NFL, and MLB to name a few.
@@ -134,6 +134,25 @@ Unlike embedding a video from YouTube, SportsPress TV gives you dynamic content 
 * NFL Draft
 * European Games - Baku 2015
 
+= Spain Channel List (42) =
+* Fútbol - Copa del Mundo, Liga Alemana, Liga Inglesa, Fútbol Internacional, etc (17)
+* Tenis - ATP, WTA, Open de Australia, Más Tenis (4)
+* Motor - Autosport TV
+* Baloncesto - FIBA, Euroliga, NBA, Más Baloncesto (4)
+* Balonmano - Mundial Balonmano
+* Golfing World - LPGA, Asian Tour, PGA Tour, Golfing World (4)
+* Artes Marcials - UFC
+* Más Deporte
+* Ciclismo
+* Atletismo
+* Rugby News
+* Deportes Extremos - FISE Extreme Sports
+* NFL Draft
+* Tarjeta Rosa
+* Zapping
+* Sochi 2014
+* Baku 2015
+
 == Installation ==
 
 = Minimum Requirements =
@@ -167,6 +186,10 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 4. SportsPress TV setting page.
 
 == Changelog ==
+
+= 0.9.2 =
+* Tweak - Add icon to admin widget.
+* Localization - Add 42 Spanish channels.
 
 = 0.9.1 =
 * Fix - Switching regions causing channel dropdown to become inactive in some cases.

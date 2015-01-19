@@ -4,9 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ePlayer\n"
-"POT-Creation-Date: 2014-12-04 14:01+1000\n"
-"PO-Revision-Date: 2014-12-04 14:01+1000\n"
-"Last-Translator: ThemeBoy <support@themeboy.com>\n"
+"POT-Creation-Date: 2015-01-19 19:50+1000\n"
+"PO-Revision-Date: 2015-01-19 19:51+1000\n"
+"Last-Translator: Brian Miyaji <brian@themeboy.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: assets/js/editor-lang.php:5 sportspress-tv.php:435
+#: assets/js/editor-lang.php:5 sportspress-tv.php:440
 msgid "Insert SportsPress TV"
 msgstr ""
 
@@ -29,7 +29,7 @@ msgstr ""
 msgid "SportsPress TV widget."
 msgstr ""
 
-#: includes/class-sportspress-tv-widget.php:15 sportspress-tv.php:509
+#: includes/class-sportspress-tv-widget.php:15 sportspress-tv.php:514
 msgid "SportsPress TV"
 msgstr ""
 
@@ -37,16 +37,16 @@ msgstr ""
 msgid "Title:"
 msgstr ""
 
-#: includes/class-sportspress-tv-widget.php:60 sportspress-tv.php:390
+#: includes/class-sportspress-tv-widget.php:60 sportspress-tv.php:395
 msgid "Region:"
 msgstr ""
 
-#: includes/class-sportspress-tv-widget.php:68 sportspress-tv.php:400
+#: includes/class-sportspress-tv-widget.php:68 sportspress-tv.php:405
 msgid "Default Channel:"
 msgstr ""
 
-#: includes/class-sportspress-tv-widget.php:80 sportspress-tv.php:413
-#: sportspress-tv.php:555
+#: includes/class-sportspress-tv-widget.php:80 sportspress-tv.php:418
+#: sportspress-tv.php:560
 msgid ""
 "Territory restrictions apply: some channels may not be available for "
 "streaming in your area."
@@ -60,86 +60,90 @@ msgstr ""
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: sportspress-tv.php:190
+#: sportspress-tv.php:194
 msgid "Small"
 msgstr ""
 
-#: sportspress-tv.php:191
+#: sportspress-tv.php:195
 msgid "Medium"
 msgstr ""
 
-#: sportspress-tv.php:192
+#: sportspress-tv.php:196
 msgid "Large"
 msgstr ""
 
-#: sportspress-tv.php:193
+#: sportspress-tv.php:197
 msgid "Full Width"
 msgstr ""
 
-#: sportspress-tv.php:214
+#: sportspress-tv.php:218
 msgid "Germany"
 msgstr ""
 
-#: sportspress-tv.php:215
+#: sportspress-tv.php:219
+msgid "Spain"
+msgstr ""
+
+#: sportspress-tv.php:220
 msgid "France"
 msgstr ""
 
-#: sportspress-tv.php:216
+#: sportspress-tv.php:221
 msgid "UK"
 msgstr ""
 
-#: sportspress-tv.php:217
+#: sportspress-tv.php:222
 msgid "Italy"
 msgstr ""
 
-#: sportspress-tv.php:218
+#: sportspress-tv.php:223
 msgid "USA"
 msgstr ""
 
-#: sportspress-tv.php:238
+#: sportspress-tv.php:243
 msgid "Autoplay"
 msgstr ""
 
-#: sportspress-tv.php:239
+#: sportspress-tv.php:244
 msgid "Scroll Initiated Play"
 msgstr ""
 
-#: sportspress-tv.php:417
+#: sportspress-tv.php:422
 msgid "Player Size:"
 msgstr ""
 
-#: sportspress-tv.php:427
+#: sportspress-tv.php:432
 msgid "Player Preview:"
 msgstr ""
 
-#: sportspress-tv.php:436
+#: sportspress-tv.php:441
 msgid "Cancel"
 msgstr ""
 
-#: sportspress-tv.php:509 sportspress-tv.php:522
+#: sportspress-tv.php:514 sportspress-tv.php:527
 msgid "SportsPress TV Settings"
 msgstr ""
 
-#: sportspress-tv.php:529
+#: sportspress-tv.php:534
 msgid "Region"
 msgstr ""
 
-#: sportspress-tv.php:541
+#: sportspress-tv.php:546
 msgid "Default Channel"
 msgstr ""
 
-#: sportspress-tv.php:560
+#: sportspress-tv.php:565
 msgid "Player Size"
 msgstr ""
 
-#: sportspress-tv.php:572 sportspress-tv.php:576
+#: sportspress-tv.php:577 sportspress-tv.php:581
 msgid "Behavior"
 msgstr ""
 
-#: sportspress-tv.php:589
+#: sportspress-tv.php:594
 msgid "Save Changes"
 msgstr ""
 
-#: sportspress-tv.php:601
+#: sportspress-tv.php:606
 msgid "Action failed. Please refresh the page and retry."
 msgstr ""

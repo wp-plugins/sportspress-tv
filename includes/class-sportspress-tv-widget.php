@@ -11,8 +11,8 @@
 class SportsPress_TV_Widget extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array( 'classname' => 'widget_sportspress_tv', 'description' => __( 'SportsPress TV widget.', 'sportspress-tv' ) );
-		parent::__construct( 'sportspress_tv_widget', __( 'SportsPress TV', 'sportspress-tv' ), $widget_ops );
+		$widget_ops = array( 'classname' => 'widget_sportspress_tv', 'description' => __( 'SportsPress TV widget.', 'sportspress_tv' ) );
+		parent::__construct( 'sportspress_tv', __( 'SportsPress TV', 'sportspress-tv' ), $widget_ops );
 	}
 
 	function widget( $args, $instance ) {
