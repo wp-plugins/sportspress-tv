@@ -1,14 +1,14 @@
 <?php
 /**
  * @package SportsPress_TV
- * @version 0.9.3
+ * @version 0.9.5
  */
 /*
 Plugin Name: SportsPress TV
 Plugin URI: http://wordpress.org/plugins/sportspress-tv/
 Description: Embed premium news and match highlights using ePlayer, the leading video on demand service for professional sports content.
 Author: ThemeBoy
-Version: 0.9.3
+Version: 0.9.5
 Author URI: http://themeboy.com/
 */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,14 +21,14 @@ if ( ! class_exists( 'SportsPress_TV' ) ) :
  * Main SportsPress_TV Class
  *
  * @class SportsPress_TV
- * @version	0.9.3
+ * @version	0.9.5
  */
 class SportsPress_TV {
 
 	/**
 	 * @var string
 	 */
-	public $version = '0.9.3';
+	public $version = '0.9.5';
 
 	/**
 	 * @var SportsPress_TV The single instance of the class
@@ -142,10 +142,10 @@ class SportsPress_TV {
 			define( 'SPORTSPRESS_TV_VERSION', '0.9.2' );
 
 		if ( !defined( 'SPORTSPRESS_TV_URL' ) )
-			define( 'SPORTSPRESS_TV_URL', plugin_dir_url( __FILE__ ) );
+			define( 'SPORTSPRESS_TV_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 
 		if ( !defined( 'SPORTSPRESS_TV_DIR' ) )
-			define( 'SPORTSPRESS_TV_DIR', plugin_dir_path( __FILE__ ) );
+			define( 'SPORTSPRESS_TV_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 	}
 
 	/**
@@ -282,7 +282,7 @@ class SportsPress_TV {
 	 */
 	public function shortcode( $atts ) {
 		$atts = shortcode_atts( $this->defaults, $atts, 'sportspress-tv' );
-		self::iframe( $atts['uuid'], $atts['size'] );
+		return self::iframe( $atts['uuid'], $atts['size'] );
 	}
 
 	/**
@@ -294,26 +294,28 @@ class SportsPress_TV {
 		if ( ! $behavior ) $behavior = $this->defaults['behavior'];
 		$width = $this->sizes[ $size ][0];
 		$height = $this->sizes[ $size ][1];
+		ob_start();
 		?>
 		<p class="sportspress-tv-wrapper">
 			<iframe class="sportspress-tv-iframe" style="background:#000" width="<?php echo $width; ?>" height="<?php echo $height; ?>" <?php if ( 'scroll' == $behavior ) { ?>data-<?php } ?>src="http://sportspress.tv/embed/<?php echo $uuid; ?>" frameborder="0" allowfullscreen></iframe>
 		</p>
 		<?php
+		return ob_get_clean();
 	}
 
 	/**
 	 * Frontend Scripts.
 	 */
 	public function scripts() {
-		wp_enqueue_script( 'jquery-waypoints', SPORTSPRESS_TV_URL . '/assets/js/waypoints.min.js', array( 'jquery' ), '2.0.5', true );
-		wp_enqueue_script( 'sportspress-tv', SPORTSPRESS_TV_URL . '/assets/js/sportspress-tv.js', array( 'jquery', 'jquery-waypoints' ), SPORTSPRESS_TV_VERSION, true );
+		wp_enqueue_script( 'jquery-waypoints', SPORTSPRESS_TV_URL . 'assets/js/waypoints.min.js', array( 'jquery' ), '2.0.5', true );
+		wp_enqueue_script( 'sportspress-tv', SPORTSPRESS_TV_URL . 'assets/js/sportspress-tv.js', array( 'jquery', 'jquery-waypoints' ), SPORTSPRESS_TV_VERSION, true );
 	}
 
 	/**
 	 * Enqueue styles
 	 */
 	public function admin_styles() {
-		wp_enqueue_style( 'sportspress-tv-admin', SPORTSPRESS_TV_URL . '/assets/css/sportspress-tv-admin.css', array(), SPORTSPRESS_TV_VERSION );
+		wp_enqueue_style( 'sportspress-tv-admin', SPORTSPRESS_TV_URL . 'assets/css/sportspress-tv-admin.css', array(), SPORTSPRESS_TV_VERSION );
 	}
 
 
@@ -345,7 +347,7 @@ class SportsPress_TV {
 	 * @return array
 	 */
 	public function add_tinymce_lang( $arr ) {
-	    $arr['sportspress_tv_button'] = SPORTSPRESS_TV_DIR . '/assets/js/editor-lang.php';
+	    $arr['sportspress_tv_button'] = SPORTSPRESS_TV_DIR . 'assets/js/editor-lang.php';
 	    return $arr;
 	}
 
@@ -367,7 +369,7 @@ class SportsPress_TV {
 	 * @return array
 	 */
 	public function add_shortcode_tinymce_plugin( $plugin_array ) {
-		$plugin_array['sportspress_tv_button'] = SPORTSPRESS_TV_URL . '/assets/js/editor.js';
+		$plugin_array['sportspress_tv_button'] = SPORTSPRESS_TV_URL . 'assets/js/editor.js';
 		return $plugin_array;
 	}
 
@@ -504,7 +506,7 @@ class SportsPress_TV {
 	 * Admin scripts.
 	 */
 	public function admin_scripts() {
-		wp_enqueue_script( 'sportspress-tv-admin', SPORTSPRESS_TV_URL . '/assets/js/sportspress-tv-admin.js', array( 'jquery' ), SPORTSPRESS_TV_VERSION, true );
+		wp_enqueue_script( 'sportspress-tv-admin', SPORTSPRESS_TV_URL . 'assets/js/sportspress-tv-admin.js', array( 'jquery' ), SPORTSPRESS_TV_VERSION, true );
 	}
 
 	/**
