@@ -1,14 +1,14 @@
 <?php
 /**
  * @package SportsPress_TV
- * @version 0.9.4
+ * @version 0.9.5
  */
 /*
 Plugin Name: SportsPress TV
 Plugin URI: http://wordpress.org/plugins/sportspress-tv/
 Description: Embed premium news and match highlights using ePlayer, the leading video on demand service for professional sports content.
 Author: ThemeBoy
-Version: 0.9.4
+Version: 0.9.5
 Author URI: http://themeboy.com/
 */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,14 +21,14 @@ if ( ! class_exists( 'SportsPress_TV' ) ) :
  * Main SportsPress_TV Class
  *
  * @class SportsPress_TV
- * @version	0.9.4
+ * @version	0.9.5
  */
 class SportsPress_TV {
 
 	/**
 	 * @var string
 	 */
-	public $version = '0.9.4';
+	public $version = '0.9.5';
 
 	/**
 	 * @var SportsPress_TV The single instance of the class
@@ -282,7 +282,7 @@ class SportsPress_TV {
 	 */
 	public function shortcode( $atts ) {
 		$atts = shortcode_atts( $this->defaults, $atts, 'sportspress-tv' );
-		self::iframe( $atts['uuid'], $atts['size'] );
+		return self::iframe( $atts['uuid'], $atts['size'] );
 	}
 
 	/**
@@ -294,11 +294,13 @@ class SportsPress_TV {
 		if ( ! $behavior ) $behavior = $this->defaults['behavior'];
 		$width = $this->sizes[ $size ][0];
 		$height = $this->sizes[ $size ][1];
+		ob_start();
 		?>
 		<p class="sportspress-tv-wrapper">
 			<iframe class="sportspress-tv-iframe" style="background:#000" width="<?php echo $width; ?>" height="<?php echo $height; ?>" <?php if ( 'scroll' == $behavior ) { ?>data-<?php } ?>src="http://sportspress.tv/embed/<?php echo $uuid; ?>" frameborder="0" allowfullscreen></iframe>
 		</p>
 		<?php
+		return ob_get_clean();
 	}
 
 	/**

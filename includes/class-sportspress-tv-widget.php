@@ -29,7 +29,7 @@ class SportsPress_TV_Widget extends WP_Widget {
 		if ( $title )
 			echo $before_title . $title . $after_title;
 
-		$sportspress_tv->iframe( $uuid, 'fullwidth', $behavior );
+		echo $sportspress_tv->iframe( $uuid, 'fullwidth', $behavior );
 
 		echo $after_widget;
 	}
