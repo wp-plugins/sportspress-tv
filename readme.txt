@@ -3,7 +3,7 @@ Contributors: ThemeBoy, brianmiyaji, aylaview
 Tags: eplayer, sports, sport, sportspress, tv, pro, video, on demand, vod, stream, streaming, A-League, AFC Champions League, AFL, ATP World Tour, Autosport, Big Ten, Bundesliga, ECB, Engage Super Rugby League, England Rugby, Eredivisie, European Tour, FIBA, Football League, Lega Calcio, Liga Sagres, Ligue 1, MLB, MLS, Moto GP, NBA, NHL, NRL, One Asia, PDC, PGA Tour, SBK, The FA, Top 14, UFC, Volvo Ocean Race, WTA Tour
 Requires at least: 3.0
 Tested up to: 4.2
-Stable tag: 0.9.5
+Stable tag: 0.9.6
 License: GPLv2 or later
 
 Embed premium news and match highlights using ePlayer, the leading video on demand service for professional sports content.
@@ -117,12 +117,30 @@ Unlike embedding a video from YouTube, SportsPress TV gives you dynamic content 
 * Sport Femminili - WTA Tennis, Lega Pallavolo Serie A femminile (2)
 * European Games - Baku 2015
 
+= Japan Channel List (47) =
+* サッカー - プレミアリーグ、セリエ、ブンデスリーガ、チャンピオンズリーグ、ヨーロッパリーグ、その他 (17)
+* ゴルフ - PGA Tour、Asian Tour、Golfing World、LPGA (4)
+* テニス - 全仏オープンテニス2013、ATP、Australian Open、WTA、その他 (5)
+* バスケットボール - LiveBasketball.TV、NBA TV、その他 (4)
+* 陸上競技 - IAAF
+* 野球 - ワールドベースボールクラシック、パ・リーグ (2)
+* アメフト - アメフトニュース
+* モータースポーツ - Autosport TV
+* 格闘技 - UFC
+* ウィンタースポーツ - FIS アルペンスキー
+* 日本人選手 - サッカー、テニス、野球、その他 (5)
+* Buzz - おもしろ＆スーパープレイ集
+* NFL Draft
+* ラグビー
+* ソチ冬季五輪ニュース
+* スポーツニュース
+
 = France Channel List (42) =
 * Football - Premier League, Ligue des Champions, Ligue Europa, Ligue 1, Liga, Bundesliga, MLS, etc (15)
 * Tennis - ATP, WTA, Australian Open (4)
 * Motorsport Auto/Moto
 * Rugby - Coupe d'Europe, VI Nations, Aviva Premiership, etc (5)
-* Basketball - LiveBasketball.TV, NBA (3)
+* Basketball - FIBA, Euroleague, NBA (3)
 * Golf - PGA Tour, LPGA, Asian Tour, etc (5)
 * Sports d'hiver - FIS
 * Athletisme - IAAF
@@ -152,6 +170,19 @@ Unlike embedding a video from YouTube, SportsPress TV gives you dynamic content 
 * Zapping
 * Sochi 2014
 * Baku 2015
+
+= Portugal Channel List (35) =
+* Futebol - Futebol Português, Destaques alemães Futebol, Copa America, Notícias Liga, Liga Italiana Serie A, Liga Francesa Ligue 1, etc (14)
+* Euro 2012 - Estádios, Jogadores (2)
+* Tênis - ATP World Tour, WTA, Australian Open, Tennis News UK (4)
+* Esporte Motorizado
+* Basquete - FIBA, Euroleague, NBA (3)
+* Golfing World - The Open Championship, European Tour, PGA Tour, LPGA, etc (6)
+* Atletismo - IAAF Athletics
+* Desporto Equestre - FEI TV
+* Outras Modalidades
+* Ciclismo
+* Desportos de Inverno - FIS Wintersports
 
 == Installation ==
 
@@ -186,6 +217,11 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 4. SportsPress TV setting page.
 
 == Changelog ==
+
+= 0.9.6 =
+* Feature - 47 new channels added for Japan.
+* Feature - 35 new channels added for Portugal.
+* Localization - Update Finnish translation.
 
 = 0.9.5 =
 * Fix - Video players always appearing at the top of posts instead of actual location.
